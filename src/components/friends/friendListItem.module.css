@@ -1,0 +1,17 @@
+.name {
+  display: flex;
+  margin-bottom: 10px;
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.status {
+  border-radius: 50%;
+  background: green;
+}
+
+.avatar {
+  border-radius: 10%;
+  width: 70px;
+  height: auto;
+}

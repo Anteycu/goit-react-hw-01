@@ -1,5 +1,6 @@
 import React from "react";
 import { StatisticsItem } from "./StatisticsItem";
+import PropTypes from "prop-types";
 
 export function StatisticsList({ title, stats }) {
   return (
@@ -13,3 +14,8 @@ export function StatisticsList({ title, stats }) {
     </section>
   );
 }
+
+StatisticsList.propTypes = {
+  stats: PropTypes.array,
+  title: PropTypes.string,
+};

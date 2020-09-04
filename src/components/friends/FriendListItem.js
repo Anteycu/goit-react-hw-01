@@ -1,16 +1,26 @@
 import React from "react";
+import styles from "./friendListItem.module.css";
+import PropTypes from "prop-types";
 
 export function FriendListItem({ friend }) {
   return (
-    <li className="item">
-      <span className="status">{friend.isOnline}</span>
+    <li className={styles.name}>
+      <span className={styles.status}>{friend.isOnline}</span>
       <img
-        className="avatar"
+        className={styles.avatar}
         src={friend.avatar}
         alt={friend.name}
         width="48"
       />
-      <p className="name">{friend.name}</p>
+      <p className={styles.name}>{friend.name}</p>
     </li>
   );
 }
+
+FriendListItem.propTypes = {
+  friend: PropTypes.shape({
+    avatar: PropTypes.string,
+    name: PropTypes.string,
+    isOnline: PropTypes.bool,
+  }),
+};

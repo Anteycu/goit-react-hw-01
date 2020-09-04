@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export function StatisticsItem({ statEl }) {
   return (
@@ -8,3 +9,10 @@ export function StatisticsItem({ statEl }) {
     </li>
   );
 }
+
+StatisticsItem.propTypes = {
+  statEl: PropTypes.shape({
+    label: PropTypes.string,
+    percentage: PropTypes.number,
+  }),
+};

@@ -1,5 +1,6 @@
 import React from "react";
 import { TransactionHistoryItem } from "./TransactionHistoryItem";
+import PropTypes from "prop-types";
 
 export function TransactionHistory({ items }) {
   return (
@@ -20,3 +21,7 @@ export function TransactionHistory({ items }) {
     </table>
   );
 }
+
+TransactionHistory.propTypes = {
+  items: PropTypes.array,
+};

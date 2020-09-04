@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export function TransactionHistoryItem({ item }) {
   return (
@@ -9,3 +10,11 @@ export function TransactionHistoryItem({ item }) {
     </tr>
   );
 }
+
+TransactionHistoryItem.propTypes = {
+  item: PropTypes.shape({
+    type: PropTypes.string,
+    amount: PropTypes.string,
+    currency: PropTypes.string,
+  }),
+};
