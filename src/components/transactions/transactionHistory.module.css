@@ -1,0 +1,8 @@
+.transaction_history {
+  width: 700px;
+  height: auto;
+  border: solid 2px olive;
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+}

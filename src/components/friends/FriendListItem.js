@@ -4,8 +4,10 @@ import PropTypes from "prop-types";
 
 export function FriendListItem({ friend }) {
   return (
-    <li className={styles.name}>
-      <span className={styles.status}>{friend.isOnline}</span>
+    <li className={styles.friendListItem}>
+      <span className={friend.isOnline ? styles.statusOn : styles.statusOff}>
+        {friend.isOnline}
+      </span>
       <img
         className={styles.avatar}
         src={friend.avatar}

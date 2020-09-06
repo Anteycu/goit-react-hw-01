@@ -1,3 +1,4 @@
 .friendList {
   display: flex;
+  flex-direction: column;
 }

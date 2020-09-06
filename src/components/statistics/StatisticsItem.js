@@ -1,11 +1,27 @@
 import React from "react";
+import styles from "./statisticsItem.module.css";
 import PropTypes from "prop-types";
+
+function randomColorRgbValues() {
+  return (
+    "rgb(" +
+    Math.floor(Math.random() * 256) +
+    "," +
+    Math.floor(Math.random() * 256) +
+    "," +
+    Math.floor(Math.random() * 256) +
+    ")"
+  );
+}
 
 export function StatisticsItem({ statEl }) {
   return (
-    <li className="item">
-      <span className="label">{statEl.label}</span>
-      <span className="percentage">{statEl.percentage}</span>
+    <li
+      style={{ backgroundColor: randomColorRgbValues() }}
+      className={styles.item}
+    >
+      <span className={styles.label}>{statEl.label}</span>
+      <span className={styles.percentage}>{statEl.percentage}%</span>
     </li>
   );
 }
