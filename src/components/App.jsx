@@ -7,15 +7,17 @@ import friends from "../friends.json";
 import transactions from "../transactions.json";
 
 function App() {
-  console.log(userData);
-  console.log(friends);
-  console.log(transactions);
   return (
     <>
-      <h1>Vite + React</h1>
-      <Profile />
-      <FriendsList />
-      <TransactionHistory />
+      <Profile
+        avatar={userData.avatar}
+        tag={userData.tag}
+        stats={userData.stats}
+        location={userData.location}
+        name={userData.username}
+      />
+      <FriendsList friends={friends} />
+      <TransactionHistory transactions={transactions} />
     </>
   );
 }
