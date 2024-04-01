@@ -1,4 +1,3 @@
-// import styles from "./App.module.css";
 import Profile from "./Profile/Profile";
 import FriendsList from "./FriendList/FriendList";
 import TransactionHistory from "./TransactionHistory/TransactionHistory";
