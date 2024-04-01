@@ -1,18 +1,18 @@
-// import styles from "./Profile.module.css"
+import s from "./Profile.module.css";
 
-const Profile = ({ username, tag, location, avatar, stats }) => {
+const Profile = ({ name, tag, location, avatar, stats }) => {
   const { followers, views, likes } = stats;
 
   return (
-    <div>
-      <div>
-        <img src={avatar} alt="User avatar" />
-        <p>{username}</p>
-        <p>{tag}</p>
+    <div className={s.profileCard}>
+      <div className={s.personInfo}>
+        <img src={avatar} alt="User avatar" width="200" className={s.avatar} />
+        <h2 className={s.name}>{name}</h2>
+        <p className={s.tag}>@{tag}</p>
         <p>{location}</p>
       </div>
 
-      <ul>
+      <ul className={s.stats}>
         <li>
           <span>Followers</span>
           <span>{followers}</span>
